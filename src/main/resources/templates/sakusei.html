@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>KAKU</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fsize {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #007bff; /* Blue color */
+        }
+
+        /* Form styles */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #007bff; /* Blue bottom border */
+            background-color: transparent;
+            border-radius: 0;
+            box-sizing: border-box;
+            transition: border-bottom-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-bottom-color: #0056b3; /* Darker blue on focus */
+            outline: none;
+        }
+
+        button.btn-close {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        button.btn-close:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .dropdown-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: none;
+        }
+
+        .dropdown-menu ul li {
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .dropdown-menu ul li a:hover {
+            background-color: #f0f0f0; /* Light gray on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="/">
+        <p class="fsize">日記作成</p>
+        <input type="text" placeholder="日記のタイトル">
+        <input type="text" placeholder="内容">
+        <button type="button" class="btn-close" aria-label="accept">作成</button>
+        <footer>
+                <li><a class="dropdown-item" href="/">ホームに戻る</a></li>
+                <li><a class="dropdown-item" href="etsuran">日記を見る</a></li>
+                </footer>
+    </form>
+</div>
+</body>
+</html>
+

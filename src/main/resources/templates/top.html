@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>INDEX</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff; /* Blue for headers */
+        }
+
+        h2 {
+            color: #6c757d; /* Gray for secondary headers */
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #212529; /* Dark gray background for navigation */
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            transition: transform 0.3s ease-in-out; /* Animation on hover */
+        }
+
+        nav ul li a {
+            color: #fff; /* White text color for navigation links */
+            text-decoration: none;
+            padding: 8px 16px; /* Increased padding */
+            border-radius: 5px;
+            border: 1px solid #007bff; /* Blue border */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+        nav ul li a:hover {
+            background-color: #007bff; /* Blue background on hover */
+            color: #fff; /* White text on hover */
+            transform: scale(1.05); /* Slightly larger size on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="rogin">ログイン</a></li>
+            <li><a href="sakusei">日記作成</a></li>
+            <li><a href="etsuran">日記を読む</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>日記アプリへようこそ</h1>
+        <h2>こちらはトップページです</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot CSS Example</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Light gray background */
+            color: #000000; /* Black text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: center; /* Center align content */
+        }
+
+        h1 {
+            color: #007bff; /* Blue for headers */
+            margin-bottom: 20px; /* Add margin bottom for separation */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button.btn-close {
+            background-color: #007bff; /* Blue button background */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.btn-close:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+            display: block; /* Ensure link takes full width */
+            margin-top: 20px; /* Add margin top for separation */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>サインアップ</h1>
+        <form method="post" action="/accept">
+            <label>ユーザーID</label>
+            <input type="text" /><br/>
+            <label>パスワード</label>
+            <input type="password" /><br/>
+            <button type="button" class="btn-close" aria-label="accept">登録</button>
+        </form>
+        <a class="dropdown-item" href="/">ホームに戻る</a>
+    </div>
+</body>
+</html>

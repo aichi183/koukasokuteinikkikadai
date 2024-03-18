@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MIRU</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff0000; /* Red for headers */
+            margin-bottom: 20px;
+        }
+
+        .dropdown-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .dropdown-menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .dropdown-menu li a {
+            color: #ff0000; /* Red for links */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #ffcccc; /* Light red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>not found</h1>
+        <h2>まだ日記が投稿されていません</h2>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/">ホームに戻る</a></li>
+            <li><a class="dropdown-item" href="sakusei">日記作成</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #ff0000; /* Red text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        h1 {
+            color: #ff0000; /* Red header color */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ff0000; /* Red label color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button.btn-close {
+            background-color: #ff0000; /* Red button background */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.btn-close:hover {
+            background-color: #b30000; /* Darker red on hover */
+        }
+
+        a {
+            color: #ff0000; /* Red link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form method="post" action="/accept">
+            <label for="userID">ユーザーID</label>
+            <input type="text" id="userID" name="userID"><br>
+            <label for="password">パスワード</label>
+            <input type="password" id="password" name="password"><br>
+            <button type="button" class="btn-close" aria-label="accept">ログイン</button>
+        </form>
+        <br>
+        <a th:href="@{'/signup'}">新規登録はこちら</a>
+        <li><a class="dropdown-item" href="/">ホームに戻る</a></li>
+    </div>
+</body>
+</html>
+
